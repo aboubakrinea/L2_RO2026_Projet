@@ -7,7 +7,41 @@ Matricule : C29371
 Dans ce Projet,nous étudions trois problèmes issus de catégories différentes conformément aux consignes 
 du module.
 l'objectif est de modéliser chaque problème mathématiquement,de l'implémenter en python (pyomo).
+
+
 les trois sujets choisis sont les suivantes:
 - problème d'affectation(catégorie 1 :sujets classiques et fondamentaux)
 - Affectation des étudions aux Projets(catégorie 4:applications universitaires)
 - Files  d'attendre en centre hospitalier(catégorie 6 :problèmes réels en Mauritanie)
+
+2.sujet 1 :problème d'affectation
+2.1 Description du problème:
+le problème d'affectation consiste a attribuer un ensenble de travalleurs a un ensenble de taches
+de maniére optimqle.chaque affectation posséde un cout spécifique 
+et l'objectif est de minimiser le cout total.
+
+
+Dans notre exemple ,nous considérons trois travalleurs
+ et trois taches.chaque travalleur
+doit étre affectè à une seule tàche, et chaque tàche doit étre réalisée par un seule travalleur. 
+
+2.2 Modélisation :
+- Variable de décision :
+Xij ={ 1 si le travalleur i est affectè à la tàche j
+        et 0 si non}
+- Fonction objectif:
+L'objectif est de minimiser le cout total d'affectation  
+ Min {i}. {j} .Cij. Xij 
+ ou Cij represente le cout d'affectation du travalleur i à la tàche j.
+- Contraintes:
+ . {j} Xij = 1 quelque soit j
+ . {i} Xij = 1 quelque soit i 
+ Xij appartient {0,1} Binaire
+
+Implémentation :
+Le modéle à été exécuté avec succés a l'aide de la bibliothéque pyomo.
+Resulta :
+travalleur 1 assigned to tàche 2
+travalleur 2 assigned to tàche 1
+travalleur 3 assigned to tàche 3
+Total = 9.0
