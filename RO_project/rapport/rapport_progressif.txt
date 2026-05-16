@@ -1,0 +1,13 @@
+Date:2026 mai
+Titre:
+Projet de Recherche Opérationnelle
+Etudiant: Aboubekrine Abderrahmane ouerzeg 
+Matricule : C29371 
+1.Introduction 
+Dans ce Projet,nous étudions trois problèmes issus de catégories différentes conformément aux consignes 
+du module.
+l'objectif est de modéliser chaque problème mathématiquement,de l'implémenter en python (pyomo).
+les trois sujets choisis sont les suivantes:
+- problème d'affectation(catégorie 1 :sujets classiques et fondamentaux)
+- Affectation des étudions aux Projets(catégorie 4:applications universitaires)
+- Files  d'attendre en centre hospitalier(catégorie 6 :problèmes réels en Mauritanie)
