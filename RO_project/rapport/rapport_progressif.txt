@@ -31,7 +31,7 @@ Xij ={ 1 si le travalleur i est affectè à la tàche j
         et 0 si non}
 - Fonction objectif:
 L'objectif est de minimiser le cout total d'affectation  
- Min {i}. {j} .Cij. Xij 
+ Min  Z =  {i}. {j} .Cij. Xij 
  ou Cij represente le cout d'affectation du travalleur i à la tàche j.
 - Contraintes:
  . {j} Xij = 1 quelque soit j
@@ -39,9 +39,41 @@ L'objectif est de minimiser le cout total d'affectation
  Xij appartient {0,1} Binaire
 
 Implémentation :
-Le modéle à été exécuté avec succés a l'aide de la bibliothéque pyomo.
-Resulta :
-travalleur 1 assigned to tàche 2
-travalleur 2 assigned to tàche 1
-travalleur 3 assigned to tàche 3
-Total = 9.0
+  Le modéle à été exécuté avec succés a l'aide de la bibliothéque pyomo.
+   Resulta :
+       travalleur 1 assigned to tàche 2
+       travalleur 2 assigned to tàche 1
+        travalleur 3 assigned to tàche 3
+        Total = 9.0
+
+3. sujet 2 : Affectation des etudiants aux Projets
+  3.1 Description du problème
+    
+    l'affectation des étudiants aux Projets est un problème fréquent dans les établissements
+    universitaires. L'objectif est d'attribuer chaque étudiant à un Projet en tenant compte de 
+    préférences tout en respectant la capacité maximale de chaque Projet.
+
+    Ce problème vise maximiser la satisfaction globale des étudiants tout en assurant une répartition
+    équilibrée entre les différentes Projets disponibles.
+
+    Dans notre exemple plusieurs étudiants expriment leurs préférences pour différents 
+    Projet et chaque Projet posséde un nombre limité de places.
+
+  3.2 Modélisation :
+   - Variable de décision :
+     Xij ={ 1 si l'étudiant i est affectè au projet j
+            et 0 si non}
+- Fonction objectif:
+L'objectif est de maximiser la satisfaction totale des étudiants  
+  Max  Z =  {i}. {j} .Pij. Xij 
+ ou Pij represente le score de préférence de l'etudiant pour le projet j.
+- Contraintes:
+ . {j} Xij <= Cj quelque soit j : chaque projet posséde une capacité limité
+          Cj:represente la capacité maximale du projet j .
+ . {i} Xij = 1 quelque soit i :chaque étudiant doit étre affectè a un seul projet
+    Xij appartient {0,1} Binaire  
+
+
+4. sujet 3 :Routage des camions d'eau dans les quartiers périphériques
+  4.1 Description du problème
+    En Mouritanie 
